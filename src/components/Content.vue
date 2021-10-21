@@ -128,7 +128,7 @@ export default class Content extends Vue {
   @Watch('native', { immediate: false, deep: true })
   private onNativeChange(to: NativeAlt, from: NativeAlt) {
     if (to && to.altName) {
-      document.title = `${this.$route.meta.title} / ${to.altName}`;
+      document.title = `${this.$route.meta?.title} / ${to.altName}`;
     }
   }
 }
@@ -270,7 +270,7 @@ export default class Content extends Vue {
 
     .content-native-info {
       display: flex;
-      min-width: 400px;
+      // min-width: 400px;
       width: 840px;
       flex-direction: column;
 
@@ -414,6 +414,24 @@ export default class Content extends Vue {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .function-name, .native-name {
+    word-break: break-word;
+  }
+  .function-name {
+    font-size: 0.9rem;
+  }
+  .native-name {
+    font-size: 1.2rem !important;
+  }
+  .content {
+    padding: 0.5rem;
+  }
+  .content-hash-history {
+    display: none !important;
   }
 }
 </style>

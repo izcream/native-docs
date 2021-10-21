@@ -28,4 +28,9 @@ export default class Home extends Vue {
   display: flex;
   flex: 1 1;
 }
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+}
 </style>

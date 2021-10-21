@@ -141,4 +141,10 @@ export default class Navigation extends Vue {
 .footer {
   height: 40px;
 }
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 30vh;
+  }
+}
 </style>
